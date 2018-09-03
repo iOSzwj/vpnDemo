@@ -53,16 +53,16 @@
     // 创建配置对象
     NEVPNProtocolIPSec *sec = [[NEVPNProtocolIPSec alloc] init];
     // 用户名
-    sec.username = @"As1";
+    sec.username = @"xxxx";
     // 服务器地址
     sec.serverAddress = @"222.184.112.38";
     
     // 密码，必须从keychain导出
-    [self createKeychainValue:@"88" forIdentifier:@"VPN_PASSWORD"];
+    [self createKeychainValue:@"xxxx" forIdentifier:@"VPN_PASSWORD"];
     sec.passwordReference = [self searchKeychainCopyMatching:@"VPN_PASSWORD"];
     
     // 秘钥，必须从keychain导出
-    [self createKeychainValue:@"888888" forIdentifier:@"VPN_shared_PASSWORD"];
+    [self createKeychainValue:@"xxxx" forIdentifier:@"VPN_shared_PASSWORD"];
     sec.sharedSecretReference = [self searchKeychainCopyMatching:@"VPN_shared_PASSWORD"];
 
     // 验证方式：共享秘钥
